@@ -2,12 +2,16 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Open sans', sans-serif;
-  background: pink;
+  background: gray;
   color: #fff;
 }
 
+main {
+  height: 100vh;
+}
+
 header {
-  margin-top: 1em;
+  padding-top: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
