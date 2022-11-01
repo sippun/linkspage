@@ -81,7 +81,7 @@ const Sakura = function(selector, options) {
     const rect = el.getBoundingClientRect();
 
     return (
-      rect.bottom <= 0.95 * document.documentElement.clientHeight
+      rect.bottom <= 0.9 * document.documentElement.clientHeight
     );
   }
 

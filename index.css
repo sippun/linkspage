@@ -9,6 +9,7 @@ body, html {
 
 main {
   height: 100vh;
+  position: relative;
 }
 
 header {
@@ -45,13 +46,13 @@ ul {
   list-style: none;
   margin: 0 auto;
   padding: 2em;
+  max-width: 480px;
 }
 
 ul > li {
   background-color: #fffa;
   backdrop-filter: blur(10px) saturate(200%) contrast(150%);
   border-radius: 10em;
-  padding: 1em;
   margin: 1.4em 0;
   box-shadow: rgb(20 32 93 / 24%) 0px 2px 8px 0px;
 }
@@ -62,6 +63,7 @@ ul > li > a {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+  padding: 1em;
 }
 
 a {
