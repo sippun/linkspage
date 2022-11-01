@@ -77,7 +77,7 @@ const Sakura = function(selector, options) {
   }
 
   // Check if the element is near bottom of viewport.
-  function elementInViewport(el) {
+  function elementNearBottom(el) {
     const rect = el.getBoundingClientRect();
 
     return (
