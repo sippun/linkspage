@@ -9,7 +9,7 @@
   <body>
     <div class="drop" id="drop"></div>
     <div class="wave" id="wave"></div>
-    <main id="content">
+    <main class="animated" id="content">
       <header>
         <img src="./images/profile.jpg" />
         <h1>@sheng.joel</h1>
@@ -46,6 +46,9 @@
       setTimeout(() => {
         console.log(drop);
         var sakura = new Sakura('body');
+        
+        document.getElementById("content").style.opacity='1';
+        document.getElementById("content").style.filter='none';
       }, 2000);
       setTimeout(() => {
         const drop = document.getElementById('drop');

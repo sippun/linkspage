@@ -10,6 +10,13 @@ body, html {
 main {
   height: 100vh;
   position: relative;
+  
+}
+
+main.animated {
+  opacity: 0;
+  filter: blur(2px);
+  transition: opacity 1s ease-in-out, filter 1s ease-in-out;
 }
 
 header {
