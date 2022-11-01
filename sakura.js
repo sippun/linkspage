@@ -76,6 +76,15 @@ const Sakura = function(selector, options) {
     );
   }
 
+  // Check if the element is near bottom of viewport.
+  function elementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+
+    return (
+      rect.bottom <= 0.95 * document.documentElement.clientHeight
+    );
+  }
+
   this.createPetal = () => {
     if (this.el.dataset.sakuraAnimId) {
       setTimeout(() => {
@@ -154,6 +163,13 @@ const Sakura = function(selector, options) {
     // Remove petals that float out of the viewport.
     PrefixedEvent(petal, 'AnimationIteration', () => {
       if (!elementInViewport(petal)) {
+        petal.remove();
+      }
+    });
+
+    // Remove petals that reach bottom of the viewport.
+    PrefixedEvent(petal, 'AnimationIteration', () => {
+      if (!elementNearBottom(petal)) {
         petal.remove();
       }
     });
