@@ -10,7 +10,6 @@ body, html {
 main {
   height: 100vh;
   position: relative;
-  
 }
 
 main.animated {
@@ -53,15 +52,21 @@ ul {
   list-style: none;
   margin: 0 auto;
   padding: 2em;
-  max-width: 480px;
+  max-width: 720px;
 }
 
 ul > li {
   background-color: #fffa;
   backdrop-filter: blur(10px) saturate(200%) contrast(150%);
   border-radius: 10em;
+  border: 2px solid #fffa;
   margin: 1.4em 0;
   box-shadow: rgb(20 32 93 / 24%) 0px 2px 8px 0px;
+}
+
+ul > li:hover {
+  border: 2px solid rgb(254, 96, 159);
+  transition: border 0.2s ease-out;
 }
 
 ul > li > a {
