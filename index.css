@@ -2,13 +2,13 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Open sans', sans-serif;
-  background-image: linear-gradient(to top, #262626 -40%, #ace0f9 -10%, #262626 30%);;
+  background-image: linear-gradient(to top, #ace0f9 -10%, #262626 30%);;
   color: #fff;
   overflow: hidden;
 }
 
 main {
-  height: 100vh;
+  height: 110vh;
   position: relative;
 }
 
@@ -48,6 +48,7 @@ header > h1 {
 }
 
 ul {
+  height: calc(100vh - 15em);
   box-sizing: border-box;
   list-style: none;
   margin: 0 auto;

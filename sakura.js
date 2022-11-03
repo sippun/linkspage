@@ -70,20 +70,20 @@ const Sakura = function(selector, options) {
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= document.documentElement.clientHeight &&
+        // (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
 
   // Check if the element is near bottom of viewport.
-  function elementNearBottom(el) {
-    const rect = el.getBoundingClientRect();
+  // function elementNearBottom(el) {
+  //   const rect = el.getBoundingClientRect();
 
-    return (
-      rect.bottom <= 0.9 * document.documentElement.clientHeight
-    );
-  }
+  //   return (
+  //     rect.bottom <= 0.9 * document.documentElement.clientHeight
+  //   );
+  // }
 
   this.createPetal = () => {
     if (this.el.dataset.sakuraAnimId) {
@@ -168,11 +168,11 @@ const Sakura = function(selector, options) {
     });
 
     // Remove petals that reach bottom of the viewport.
-    PrefixedEvent(petal, 'AnimationIteration', () => {
-      if (!elementNearBottom(petal)) {
-        petal.remove();
-      }
-    });
+    // PrefixedEvent(petal, 'AnimationIteration', () => {
+    //   if (!elementNearBottom(petal)) {
+    //     petal.remove();
+    //   }
+    // });
 
     // Add the petal to the target element.
     this.el.appendChild(petal);
