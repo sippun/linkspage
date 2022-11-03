@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./sakura.min.css">
   </head>
   <body>
-    <div class="drop" id="drop"></div>
-    <div class="wave" id="wave"></div>
+    <div class="intro-container">
+      <div class="drop" id="drop"></div>
+      <div class="wave" id="wave"></div>
+    </div>
     <main class="animated" id="content">
       <header>
         <img src="./images/profile.jpg" />
@@ -44,7 +46,8 @@
     <script src="./sakura.js"></script>
     <script>
       setTimeout(() => {
-        console.log(drop);
+        
+        
         var sakura = new Sakura('body');
         
         document.getElementById("content").style.opacity='1';
@@ -52,8 +55,9 @@
       }, 2000);
       setTimeout(() => {
         const drop = document.getElementById('drop');
-        const wave = document.getElementById('wave');
+        
         drop.remove();
+        const wave = document.getElementById('wave');
         wave.remove();
       }, 4000);
 

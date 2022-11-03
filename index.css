@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Open sans', sans-serif;
-  background: gray;
+  background-image: linear-gradient(to top, #262626 -40%, #ace0f9 -10%, #262626 30%);;
   color: #fff;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@ main.animated {
 }
 
 header {
-  padding-top: 1em;
+  padding-top: 4em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -83,11 +83,14 @@ a {
   text-decoration: none;
 }
 
-div {
-  margin: 175px auto;
+.intro-container{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .drop {
+  margin: 175px auto;
   position: relative;
 	width: 20px;
 	height: 20px;
@@ -122,7 +125,7 @@ div {
 .wave {
   position: relative;
   opacity: 0;
-  top: 0;
+  top: 200px;
 	width: 2px;
 	height: 1px;
   border: #FFF 7px solid;
@@ -171,7 +174,7 @@ div {
       width: 600px;
       height: 300px;
       border-width: 1px;
-      top: -100px;
+      top: 0px;
       opacity: 0;
     }
 }
