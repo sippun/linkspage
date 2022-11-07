@@ -25,11 +25,15 @@ body {
   }
 }
 
+.main-wrapper {
+  height: 110vh;
+}
 
 main {
-  height: 110vh;
+  height: 100vh;
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
+
 }
 
 main.animated {
