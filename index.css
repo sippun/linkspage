@@ -1,15 +1,35 @@
-body, html {
-  margin: 0;
+:root {
+  --g1: #ace0f9;
+  --g2: #262626;
+}
+
+body {
+  background: linear-gradient(to top, #667db6 0%, #667db6 65%, #eaafc8 100%);
+  animation: background-pan 4s ease-in;
+  background-size: 100% 400%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
   padding: 0;
   font-family: 'Open sans', sans-serif;
-  background-image: linear-gradient(to top, #ace0f9 -10%, #262626 30%);;
   color: #fff;
-  overflow: hidden;
 }
+
+@keyframes background-pan {
+  from {
+    background-position: center bottom;
+  }
+  
+  to {
+    background-position: center top;
+  }
+}
+
 
 main {
   height: 110vh;
   position: relative;
+  overflow: auto;
 }
 
 main.animated {
