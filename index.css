@@ -4,8 +4,9 @@
 }
 
 body {
-  background: linear-gradient(to top, #667db6 0%, #667db6 65%, #eaafc8 100%);
-  animation: background-pan 4s ease-in;
+  background: linear-gradient(to top, #2c488e -20%, #667db6 20%, #667db6 75%, #eaafc8 100%);
+  transition: background-position 1s ease-out;
+  background-position: center bottom;
   background-size: 100% 400%;
   height: 100vh;
   overflow: hidden;
@@ -13,16 +14,6 @@ body {
   padding: 0;
   font-family: 'Open sans', sans-serif;
   color: #fff;
-}
-
-@keyframes background-pan {
-  from {
-    background-position: center bottom;
-  }
-  
-  to {
-    background-position: center top;
-  }
 }
 
 .main-wrapper {
@@ -39,7 +30,7 @@ main {
 main.animated {
   opacity: 0;
   filter: blur(2px);
-  transition: opacity 1s ease-in-out, filter 1s ease-in-out;
+  transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out;
 }
 
 header {
