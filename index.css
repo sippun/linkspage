@@ -51,29 +51,34 @@ header > img {
 
 header > h1 {
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 1.2em;
   font-weight: bold;
+  margin-top: 1.2em;
   border-radius: 1em;
-  background-color: #000a;
+  /* background-color: #000a; */
   color: #fff;
-  padding: 0.3em 0.6em;
-  border: 1px solid #fffa;
-  backdrop-filter: blur(10px) saturate(200%) contrast(150%);
-  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+  /* padding: 0.3em 0.6em;
+  border: 2px solid #fffa; */
+  /* backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%); */
 }
 
 ul {
-  height: calc(100vh - 15em);
+  height: calc(100vh - 16em);
   box-sizing: border-box;
   list-style: none;
-  margin: 0 auto;
-  padding: 2em;
+  margin: 0em auto;
+  padding: 0em 2em;
   max-width: 720px;
 }
 
 ul > li {
-  background-color: #fffa;
-  backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  /* background-color: #fffa; */
+  /* backdrop-filter: blur(6px) saturate(180%) contrast(100%); */
+  /* backdrop-filter: blur(10px) saturate(200%) contrast(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%); */
+  background-color: none;
   border-radius: 10em;
   border: 2px solid #fffa;
   margin: 1.4em 0;
@@ -81,8 +86,18 @@ ul > li {
 }
 
 ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border: 2px solid rgb(254, 96, 159);
-  transition: border 0.2s ease-out;
+}
+
+ul > li::after {
+  background-color: #fff;
+}
+
+ul > li:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 ul > li > a {
@@ -95,8 +110,11 @@ ul > li > a {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  border-radius: 10em;
+  border: 2px;
 }
 
 .intro-container{
