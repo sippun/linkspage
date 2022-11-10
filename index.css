@@ -253,3 +253,17 @@ footer {
       top: 190px;
     }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+  background: linear-gradient(to-top, #667db6, #eaafc8);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+}
