@@ -91,6 +91,12 @@ ul > li:hover {
   border: 2px solid rgb(254, 96, 159);
 }
 
+ul > li:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(254, 96, 159);
+}
+
 ul > li::after {
   background-color: #fff;
 }
@@ -99,6 +105,24 @@ ul > li:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
+
+ul > li:active {
+  animation-name: slash;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes slash {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
 
 ul > li > a {
   display: flex;
@@ -220,25 +244,25 @@ footer {
 }
 
 @keyframes ripple {
-    from {
-      opacity: 1;
-    }
-    to {
-      width: 600px;
-      height: 300px;
-      border-width: 1px;
-      top: 0px;
-      opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 600px;
+    height: 300px;
+    border-width: 1px;
+    top: 0px;
+    opacity: 0;
+  }
 }
 
 @keyframes ripple-2 {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
   100% {
     width: 200px;
     height: 100px;

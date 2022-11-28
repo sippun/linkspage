@@ -20,7 +20,7 @@
         </header>
         <ul>
           <li>
-            <a href="https://joelsheng.netlify.app" target="blank" rel="noreferrer noopener">
+            <a href="javascript:delay('https://joelsheng.netlify.app');" rel="noreferrer noopener">
               <!-- <img src="./images/homepage.svg" alt="Homepage" width="20" /> -->
               Website
             </a>
@@ -63,6 +63,12 @@
 
     <script src="./sakura.js"></script>
     <script>
+      function delay(URL) {
+        setTimeout(function () {
+            window.open(URL, "_blank"); // this is what I've changed.
+        }, 300);
+      }
+
       setTimeout(() => {
         document.getElementById("content").style.opacity='1';
         document.getElementById("content").style.filter='none';
