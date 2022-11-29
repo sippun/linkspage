@@ -78,6 +78,7 @@ ul > li {
   /* backdrop-filter: blur(6px) saturate(180%) contrast(100%); */
   /* backdrop-filter: blur(10px) saturate(200%) contrast(150%);
   -webkit-backdrop-filter: blur(10px) saturate(200%) contrast(150%); */
+  position:relative;
   background-color: none;
   border-radius: 10em;
   border: 2px solid #fffa;
@@ -91,34 +92,54 @@ ul > li:hover {
   border: 2px solid rgb(254, 96, 159);
 }
 
-ul > li:active {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgb(254, 96, 159);
+ul > li:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 ul > li::after {
   background-color: #fff;
 }
 
-ul > li:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+ul > li:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(254, 96, 159);
 }
 
-ul > li:active {
+ul > li:active::before {
+  content: "";
+  position:absolute;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: white;
+  height: 2px;
   animation-name: slash;
   animation-timing-function: ease-in;
   animation-duration: 0.2s;
 }
 
+ul > li.clicked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: white;
+  height: 2px;
+  width: 100%;
+}
+
+ul > li.clicked:hover::before {
+  background-color: rgb(254, 96, 159);
+}
+
 @keyframes slash {
-  from {
+  0% {
     opacity: 0;
     width: 0%;
   }
-  to {
-    opacity: 0;
+  100% {
+    opacity: 1;
     width: 100%;
   }
 }

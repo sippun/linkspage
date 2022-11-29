@@ -20,30 +20,30 @@
         </header>
         <ul>
           <li>
-            <a href="javascript:delay('https://joelsheng.netlify.app');" rel="noreferrer noopener">
+            <a href="https://joelsheng.netlify.app" rel="noreferrer noopener">
               <!-- <img src="./images/homepage.svg" alt="Homepage" width="20" /> -->
               Website
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/sheng.joel" target="blank" rel="noreferrer noopener">
+            <a href="https://instagram.com/sheng.joel" rel="noreferrer noopener">
               <!-- <img src="./images/instagram.svg" alt="Instagram" width="20" /> -->
               Instagram
             </a>
           </li>
           <li>
-            <a href="https://open.spotify.com/user/cptcnt?si=8094f593a23d4b59" target="blank" rel="noreferrer noopener">
+            <a href="https://open.spotify.com/user/cptcnt?si=8094f593a23d4b59" rel="noreferrer noopener">
               Spotify
             </a>
           </li>
           <li>
-            <a href="https://github.com/sippun" target="blank" rel="noreferrer noopener">
+            <a href="https://github.com/sippun" rel="noreferrer noopener">
               <!-- <img src="./images/github.svg" alt="GitHub" width="20" /> -->
               GitHub
             </a>
           </li>
           <li>
-            <a href="https://projectkaizen.io" target="blank" rel="noreferrer noopener">
+            <a href="https://projectkaizen.io" rel="noreferrer noopener">
               <!-- <img src="./images/github.svg" alt="GitHub" width="20" /> -->
               Kaizen
             </a>
@@ -65,8 +65,18 @@
     <script>
       function delay(URL) {
         setTimeout(function () {
-            window.open(URL, "_blank"); // this is what I've changed.
-        }, 300);
+            window.open(URL, "_blank");
+        }, 500);
+      }
+
+      var li = [...document.getElementsByTagName("li")];
+      console.log(li);
+      for(let i = 0; i < li.length; i++){
+        li[i].addEventListener('click', (e => {
+          e.preventDefault();
+          li[i].className = "clicked";
+          delay(e.target.href);
+        }));
       }
 
       setTimeout(() => {
